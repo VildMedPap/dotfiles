@@ -37,7 +37,7 @@ alias dad="curl https://icanhazdadjoke.com/ && echo"
 
 # If any error message appear (e.g. file doesn't exist) redirects to /dev/null,
 # which is a special file that discards all data written to it.
-source ~/powerlevel10k/powerlevel10k.zsh-theme 2>/dev/null
+source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme 2>/dev/null
 source ~/.p10k.zsh 2>/dev/null
 
 # Prevent Python from writing bytecode files
@@ -45,14 +45,14 @@ export PYTHONDONTWRITEBYTECODE=1
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+__conda_setup="$('/Users/sebastiansteenssoe/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    if [ -f "/Users/sebastiansteenssoe/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/sebastiansteenssoe/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+        export PATH="/Users/sebastiansteenssoe/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup

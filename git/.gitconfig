@@ -4,7 +4,6 @@
 [init]
     defaultBranch = main
 [core]
-    editor = nano||vim
     pager = bat --paging=always||less
 [alias]
     rank = shortlog -sn --no-merges

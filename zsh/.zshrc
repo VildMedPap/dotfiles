@@ -35,6 +35,13 @@ alias jp="jupyter-lab"
 alias timestamp="date -u +'%Y-%m-%dT%H:%M:%SZ'"
 alias dad="curl https://icanhazdadjoke.com/ && echo"
 
+if ! type tldr &> /dev/null; then
+    echo "tldr could not be found"
+else
+    alias man=tldr
+    alias woman=/usr/bin/man
+fi
+
 # If any error message appear (e.g. file doesn't exist) redirects to /dev/null,
 # which is a special file that discards all data written to it.
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme 2>/dev/null

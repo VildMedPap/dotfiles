@@ -43,7 +43,7 @@ wttr() {
 }
 
 
-if hash fd fzf &>/dev/null; then
+if hash fd fzf bat &>/dev/null; then
     cddir() {
         folder=$(fd --type d . $HOME|fzf --height 50% --border)
 
@@ -67,8 +67,12 @@ if hash fd fzf &>/dev/null; then
         code $folder
         fi
     }
+
+    stdoutfile() {
+        bat $(fzf --height 50% --border --preview 'bat --color=always {}')
+    }
 else
-    echo "Either fd and / or fzf is missing"
+    echo "One or more of the following clis are missing: fd, fzf, bat"
 fi
 
 # If any error message appear (e.g. file doesn't exist) redirects to /dev/null,

@@ -44,8 +44,16 @@ wttr() {
 
 
 if hash fd fzf &>/dev/null; then
+    cddir() {
+        folder=$(fd --type d . $HOME|fzf --height 50% --border)
+
+        if [ -n "$folder" ]; then
+        cd $folder
+        fi
+    }
+
     opendir() {
-        folder=$(fd --type d . $HOME|fzf)
+        folder=$(fd --type d . $HOME|fzf --height 50% --border)
 
         if [ -n "$folder" ]; then
         open $folder
@@ -53,7 +61,7 @@ if hash fd fzf &>/dev/null; then
     }
 
     codedir() {
-        folder=$(fd --type d . $HOME|fzf)
+        folder=$(fd --type d . $HOME|fzf --height 50% --border)
 
         if [ -n "$folder" ]; then
         code $folder

@@ -45,7 +45,7 @@ wttr() {
 
 if hash fd fzf bat &>/dev/null; then
     cddir() {
-        folder=$(fd --type d . $HOME|fzf --height 50% --border)
+        folder=$(fd --type d . $HOME|fzf --height 50% --border --exact)
 
         if [ -n "$folder" ]; then
         cd $folder
@@ -53,7 +53,7 @@ if hash fd fzf bat &>/dev/null; then
     }
 
     opendir() {
-        folder=$(fd --type d . $HOME|fzf --height 50% --border)
+        folder=$(fd --type d . $HOME|fzf --height 50% --border --exact)
 
         if [ -n "$folder" ]; then
         open $folder
@@ -61,7 +61,7 @@ if hash fd fzf bat &>/dev/null; then
     }
 
     codedir() {
-        folder=$(fd --type d . $HOME|fzf --height 50% --border)
+        folder=$(fd --type d . $HOME|fzf --height 50% --border --exact)
 
         if [ -n "$folder" ]; then
         code $folder
@@ -69,7 +69,7 @@ if hash fd fzf bat &>/dev/null; then
     }
 
     stdoutfile() {
-        bat $(fzf --height 50% --border --preview 'bat --color=always {}')
+        bat $(fzf --height 50% --border --preview 'bat --color=always {}' --exact)
     }
 else
     echo "One or more of the following clis are missing: fd, fzf, bat"

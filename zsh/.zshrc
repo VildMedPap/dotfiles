@@ -46,28 +46,28 @@ wttr() {
 if hash fd fzf bat &>/dev/null; then
     cddir() {
         folder=$(fd --type d . $HOME|fzf --height 50% --border --exact)
-
+        
         if [ -n "$folder" ]; then
-        cd $folder
+            cd $folder
         fi
     }
-
+    
     opendir() {
         folder=$(fd --type d . $HOME|fzf --height 50% --border --exact)
-
+        
         if [ -n "$folder" ]; then
-        open $folder
+            open $folder
         fi
     }
-
+    
     codedir() {
         folder=$(fd --type d . $HOME|fzf --height 50% --border --exact)
-
+        
         if [ -n "$folder" ]; then
-        code $folder
+            code $folder
         fi
     }
-
+    
     stdoutfile() {
         bat $(fzf --height 50% --border --preview 'bat --color=always {}' --exact)
     }

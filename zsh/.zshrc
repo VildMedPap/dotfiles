@@ -42,6 +42,27 @@ wttr() {
     curl "wttr.in/$city?M"
 }
 
+
+if hash fd fzf &>/dev/null; then
+    opendir() {
+        folder=$(fd --type d . $HOME|fzf)
+
+        if [ -n "$folder" ]; then
+        open $folder
+        fi
+    }
+
+    codedir() {
+        folder=$(fd --type d . $HOME|fzf)
+
+        if [ -n "$folder" ]; then
+        code $folder
+        fi
+    }
+else
+    echo "Either fd and / or fzf is missing"
+fi
+
 # If any error message appear (e.g. file doesn't exist) redirects to /dev/null,
 # which is a special file that discards all data written to it.
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme 2>/dev/null

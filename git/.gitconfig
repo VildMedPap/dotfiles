@@ -7,15 +7,15 @@
     pager = bat --paging=always||less
 [alias]
     rank = shortlog -sn --no-merges
-    cfe = '!f() { git commit -e -m "feat($1): $2"; }; f' # a new feature for the user, not a new feature for a build script
-    cfi = '!f() { git commit -e -m "fix($1): $2"; }; f' # bug fix for the user, not a fix to a build scripts
-    cre = '!f() { git commit -e -m "refactor($1): $2"; }; f' # refactoring production code
-    cch = '!f() { git commit -e -m "chore($1): $2"; }; f' # no production code change
-    cdo = '!f() { git commit -e -m "docs($1): $2"; }; f' # changes to documentation
-    cst = '!f() { git commit -e -m "style($1): $2"; }; f' # formatting, missing semicolons, etc.; no code change
-    cpe = '!f() { git commit -e -m "perf($1): $2"; }; f' # code improved in terms of processing performance
-    cve = '!f() { git commit -e -m "vendor($1): $2"; }; f' # update version for dependencies, packages.
-    cte = '!f() { git commit -e -m "test($1): $2"; }; f' # adding missing tests, refactoring tests; no production code change
+    feat = "!f() { git commit -e -m \"feat($1): $2\"; }; f" # a new feature for the user, not a new feature for a build script
+    fix = "!f() { git commit -e -m \"fix($1): $2\"; }; f" # bug fix for the user, not a fix to a build scripts
+    refactor = "!f() { git commit -e -m \"refactor($1): $2\"; }; f" # refactoring production code
+    chore = "!f() { git commit -e -m \"chore($1): $2\"; }; f" # no production code change
+    docs = "!f() { git commit -e -m \"docs($1): $2\"; }; f" # changes to documentation
+    style = "!f() { git commit -e -m \"style($1): $2\"; }; f" # formatting, missing semicolons, etc.; no code change
+    perf = "!f() { git commit -e -m \"perf($1): $2\"; }; f" # code improved in terms of processing performance
+    vendor = "!f() { git commit -e -m \"vendor($1): $2\"; }; f" # update version for dependencies, packages.
+    test = "!f() { git commit -e -m \"test($1): $2\"; }; f" # adding missing tests, refactoring tests; no production code change
 
 [grep]
 	lineNumber = true

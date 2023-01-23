@@ -42,32 +42,31 @@ wttr() {
     curl "wttr.in/$city?M"
 }
 
-
 if hash fd fzf bat &>/dev/null; then
     cddir() {
-        folder=$(fd --type d . $HOME|fzf --height 50% --border --exact)
-        
+        folder=$(fd --type d . $HOME | fzf --height 50% --border --exact)
+
         if [ -n "$folder" ]; then
             cd $folder
         fi
     }
-    
+
     opendir() {
-        folder=$(fd --type d . $HOME|fzf --height 50% --border --exact)
-        
+        folder=$(fd --type d . $HOME | fzf --height 50% --border --exact)
+
         if [ -n "$folder" ]; then
             open $folder
         fi
     }
-    
+
     codedir() {
-        folder=$(fd --type d . $HOME|fzf --height 50% --border --exact)
-        
+        folder=$(fd --type d . $HOME | fzf --height 50% --border --exact)
+
         if [ -n "$folder" ]; then
             code $folder
         fi
     }
-    
+
     stdoutfile() {
         bat $(fzf --height 50% --border --preview 'bat --color=always {}' --exact)
     }
@@ -77,7 +76,7 @@ fi
 
 # If any error message appear (e.g. file doesn't exist) redirects to /dev/null,
 # which is a special file that discards all data written to it.
-source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme 2>/dev/null
+source ~/powerlevel10k/powerlevel10k.zsh-theme 2>/dev/null
 source ~/.p10k.zsh 2>/dev/null
 
 # Prevent Python from writing bytecode files
@@ -85,7 +84,7 @@ export PYTHONDONTWRITEBYTECODE=1
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/sebastiansteenssoe/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/sebastiansteenssoe/miniconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else

@@ -4,23 +4,18 @@ neofetch
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+autoload -Uz compinit && compinit
+autoload -U bashcompinit && bashcompinit
+
 ZSH_THEME="avit"
 COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(git zsh-autosuggestions docker docker-compose zsh-docker-aliases alias-tips zsh-syntax-highlighting rustup zsh-cargo-completion)
 source $ZSH/oh-my-zsh.sh
+eval "$(register-python-argcomplete pipx)"
 
 # ALIASES
-
-# Conda aliases
-alias cact='conda activate'
-alias cdeact='conda deactivate'
-alias cls='conda list'
-alias cels='conda env list'
-alias ccen='conda create --name'
-alias conup='conda update'
-alias conin='conda install'
 
 # Docker shortcuts
 alias dkdang='dkrmi -f $(docker images -f "dangling=true" -q)'
@@ -45,28 +40,28 @@ wttr() {
 if hash fd fzf bat &>/dev/null; then
     cddir() {
         folder=$(fd --type d . $HOME | fzf --height 50% --border --exact)
-
+        
         if [ -n "$folder" ]; then
             cd $folder
         fi
     }
-
+    
     opendir() {
         folder=$(fd --type d . $HOME | fzf --height 50% --border --exact)
-
+        
         if [ -n "$folder" ]; then
             open $folder
         fi
     }
-
+    
     codedir() {
         folder=$(fd --type d . $HOME | fzf --height 50% --border --exact)
-
+        
         if [ -n "$folder" ]; then
             code $folder
         fi
     }
-
+    
     stdoutfile() {
         bat $(fzf --height 50% --border --preview 'bat --color=always {}' --exact)
     }
@@ -77,22 +72,16 @@ fi
 # If any error message appear (e.g. file doesn't exist) redirects to /dev/null,
 # which is a special file that discards all data written to it.
 source ~/powerlevel10k/powerlevel10k.zsh-theme 2>/dev/null
+source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme 2>/dev/null
 source ~/.p10k.zsh 2>/dev/null
 
 # Prevent Python from writing bytecode files
 export PYTHONDONTWRITEBYTECODE=1
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/sebastiansteenssoe/miniconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/sebastiansteenssoe/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/sebastiansteenssoe/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/sebastiansteenssoe/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# Created by `pipx` on 2023-02-14 09:12:46
+export PATH="$PATH:/Users/sebastiansteenssoe/.local/bin"
+
+# Manually added
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

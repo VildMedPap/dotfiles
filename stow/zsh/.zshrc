@@ -29,6 +29,7 @@ alias c=clear
 alias jp="jupyter-lab"
 alias timestamp="date -u +'%Y-%m-%dT%H:%M:%SZ'"
 alias dad="curl https://icanhazdadjoke.com/ && echo"
+alias tmux="tmux -u"
 
 # Custom functions
 wttr() {
@@ -85,3 +86,19 @@ export PATH="$PATH:/Users/sebastiansteenssoe/.local/bin"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/sebastiansteenssoe/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/sebastiansteenssoe/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/sebastiansteenssoe/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/sebastiansteenssoe/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

@@ -23,7 +23,7 @@
 # * perf:       Code improved in terms of processing performance
 # * vendor:     Update version for dependencies, packages
 # * test:       Adding missing tests, refactoring tests; no production code change
-# * ci:         Changes to CI configuration files and scripts
+# * cicd:       Changes to CI/CD configuration files and scripts
 
 # ** Rules
 # The 7 rules of a great commit message

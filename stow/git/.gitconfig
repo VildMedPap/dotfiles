@@ -5,20 +5,27 @@
     defaultBranch = main
 [core]
     pager = bat --paging=always||less
+[column]
+    ui = auto
+[branch]
+    sort = -committerdate
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
 [alias]
     rank = shortlog -sn --no-merges
-    feat = "!f() { git commit -m \"feat: $1\"; }; f" # a new feature for the user, not a new feature for a build script
-    fix = "!f() { git commit -m \"fix: $1\"; }; f" # bug fix for the user, not a fix to a build scripts
-    refactor = "!f() { git commit -m \"refactor: $1\"; }; f" # refactoring production code
-    chore = "!f() { git commit -m \"chore: $1\"; }; f" # no production code change
-    docs = "!f() { git commit -m \"docs: $1\"; }; f" # changes to documentation
-    style = "!f() { git commit -m \"style: $1\"; }; f" # formatting, missing semicolons, etc.; no code change
-    perf = "!f() { git commit -m \"perf: $1\"; }; f" # code improved in terms of processing performance
-    vendor = "!f() { git commit -m \"vendor: $1\"; }; f" # update version for dependencies, packages.
-    test = "!f() { git commit -m \"test: $1\"; }; f" # adding missing tests, refactoring tests; no production code change
-    ci = "!f() { git commit -m \"ci: $1\"; }; f" # changes to CI configuration files and scripts
-
 [grep]
 	lineNumber = true
 [commit]
 	template = ~/.gitmessage
+[push]
+    default = simple
+    autoSetupRemote = true
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
+[help]
+    autocorrect = prompt

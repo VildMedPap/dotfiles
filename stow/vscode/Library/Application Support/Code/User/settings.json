@@ -63,5 +63,10 @@
   "editor.fontFamily": "'Monaspace Neon', monospace",
   "editor.fontLigatures": "'calt', 'liga'",
   "editor.fontSize": 14,
-  "editor.fontWeight": 200
+  "editor.fontWeight": 200,
+  "svg.preview.boundingBox": true,
+  "svg.preview.transparencyGrid": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

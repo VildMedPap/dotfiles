@@ -13,7 +13,6 @@ HIST_STAMPS="yyyy-mm-dd"
 
 plugins=(git zsh-autosuggestions docker docker-compose zsh-docker-aliases alias-tips zsh-syntax-highlighting rustup zsh-cargo-completion)
 source $ZSH/oh-my-zsh.sh
-eval "$(register-python-argcomplete pipx)"
 
 # ALIASES
 
@@ -102,3 +101,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+. "$HOME/.cargo/env"
+source "$HOME/.rye/env"
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/sebastiansteenssoe/.cache/lm-studio/bin"

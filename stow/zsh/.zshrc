@@ -109,3 +109,4 @@ eval "$(uvx --generate-shell-completion zsh)"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/sebastiansteenssoe/.cache/lm-studio/bin"
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"

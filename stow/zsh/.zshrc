@@ -11,7 +11,7 @@ ZSH_THEME="avit"
 COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git zsh-autosuggestions docker docker-compose zsh-docker-aliases alias-tips zsh-syntax-highlighting rustup zsh-cargo-completion)
+plugins=(git zsh-autosuggestions docker docker-compose zsh-docker-aliases alias-tips zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # ALIASES

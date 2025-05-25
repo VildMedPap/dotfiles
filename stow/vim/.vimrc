@@ -1,5 +1,6 @@
 set relativenumber number
 set scrolloff=999
+set showmode
 
 " Disable backup files
 set nobackup

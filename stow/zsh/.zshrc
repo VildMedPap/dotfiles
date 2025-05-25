@@ -7,7 +7,7 @@ export ZSH="$HOME/.oh-my-zsh"
 autoload -Uz compinit && compinit
 autoload -U bashcompinit && bashcompinit
 
-ZSH_THEME="avit"
+ZSH_THEME=""
 COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 HIST_STAMPS="yyyy-mm-dd"
 
@@ -69,12 +69,6 @@ else
     echo "One or more of the following clis are missing: fd, fzf, bat"
 fi
 
-# If any error message appear (e.g. file doesn't exist) redirects to /dev/null,
-# which is a special file that discards all data written to it.
-source ~/powerlevel10k/powerlevel10k.zsh-theme 2>/dev/null
-source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme 2>/dev/null
-source ~/.p10k.zsh 2>/dev/null
-
 # Prevent Python from writing bytecode files
 export PYTHONDONTWRITEBYTECODE=1
 
@@ -108,3 +102,5 @@ eval "$(uvx --generate-shell-completion zsh)"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/sebastiansteenssoe/.cache/lm-studio/bin"
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+
+eval "$(starship init zsh)"

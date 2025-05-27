@@ -104,3 +104,6 @@ export PATH="$PATH:/Users/sebastiansteenssoe/.cache/lm-studio/bin"
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 
 eval "$(starship init zsh)"
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8

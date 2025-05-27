@@ -51,11 +51,6 @@ fi
 # Prevent Python from writing bytecode files
 export PYTHONDONTWRITEBYTECODE=1
 
-# Manually added
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 source "$HOME/.cargo/env"
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"

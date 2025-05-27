@@ -1,8 +1,23 @@
 # neofetch info
 neofetch
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
+
+# Add in zsh plugins
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit light akarzim/zsh-docker-aliases
+
+# Add in snippets
+zinit snippet OMZL::git.zsh
+zinit snippet OMZL::directories.zsh
+zinit snippet OMZP::git
+
+bindkey '^f' autosuggest-accept
 
 autoload -Uz compinit && compinit
 autoload -U bashcompinit && bashcompinit
@@ -10,9 +25,6 @@ autoload -U bashcompinit && bashcompinit
 ZSH_THEME=""
 COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 HIST_STAMPS="yyyy-mm-dd"
-
-plugins=(git zsh-autosuggestions docker docker-compose zsh-docker-aliases alias-tips zsh-syntax-highlighting)
-source $ZSH/oh-my-zsh.sh
 
 # ALIASES
 

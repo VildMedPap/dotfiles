@@ -19,23 +19,10 @@ source $ZSH/oh-my-zsh.sh
 # Docker shortcuts
 alias dkdang='dkrmi -f $(docker images -f "dangling=true" -q)'
 
-# Zsh
-alias zshconfig="code ~/.zshrc"
-alias zshexec="exec zsh"
-
 # Misc
 alias c=clear
-alias jp="jupyter-lab"
 alias timestamp="date -u +'%Y-%m-%dT%H:%M:%SZ'"
-alias dad="curl https://icanhazdadjoke.com/ && echo"
 alias tmux="tmux -u"
-
-# Custom functions
-wttr() {
-    local city=$1
-    shift 1
-    curl "wttr.in/$city?M"
-}
 
 if hash fd fzf bat &>/dev/null; then
     cddir() {
@@ -45,35 +32,12 @@ if hash fd fzf bat &>/dev/null; then
             cd $folder
         fi
     }
-    
-    opendir() {
-        folder=$(fd --type d . $HOME | fzf --height 50% --border --exact)
-        
-        if [ -n "$folder" ]; then
-            open $folder
-        fi
-    }
-    
-    codedir() {
-        folder=$(fd --type d . $HOME | fzf --height 50% --border --exact)
-        
-        if [ -n "$folder" ]; then
-            code $folder
-        fi
-    }
-    
-    stdoutfile() {
-        bat $(fzf --height 50% --border --preview 'bat --color=always {}' --exact)
-    }
 else
     echo "One or more of the following clis are missing: fd, fzf, bat"
 fi
 
 # Prevent Python from writing bytecode files
 export PYTHONDONTWRITEBYTECODE=1
-
-# Created by `pipx` on 2023-02-14 09:12:46
-export PATH="$PATH:/Users/sebastiansteenssoe/.local/bin"
 
 # Manually added
 export PYENV_ROOT="$HOME/.pyenv"

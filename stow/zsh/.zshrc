@@ -41,6 +41,7 @@ alias c=clear
 alias timestamp="date -u +'%Y-%m-%dT%H:%M:%SZ'"
 alias tmux="tmux -u"
 alias l='ls -lAhG'
+alias take='foo(){ mkdir -p "$1" && cd "$1"; }; foo'
 
 # Directory jumping
 alias ..='cd ..'
@@ -52,6 +53,9 @@ alias ......='cd ../../../../..'
 # Quick jumps
 alias ~='cd ~'
 alias -- -="cd -"
+
+### ── Completion Configuration ───────────────────────────────────
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 ### ── History Configuration ──────────────────────────────────────
 # Controls how shell command history is stored, shared, and deduplicated

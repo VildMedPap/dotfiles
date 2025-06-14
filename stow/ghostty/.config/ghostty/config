@@ -1,0 +1,12 @@
+theme = GruvBoxDarkHard
+font-family = Monaspace Neon ExtraLight
+font-family-bold = Monaspace Neon Medium
+font-family-italic = Monaspace Neon ExtraLight Italic
+font-family-bold-italic = Monaspace Neon Medium Italic
+font-size = 14
+font-feature = -calt, -liga, -dlig
+mouse-hide-while-typing = true
+copy-on-select = clipboard
+bold-is-bright = true
+macos-icon = xray
+adjust-underline-position = 20%

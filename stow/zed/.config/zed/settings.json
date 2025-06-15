@@ -61,6 +61,7 @@
     "light": "One Light",
     "dark": "Gruvbox Dark Hard"
   },
+  "snippet_sort_order": "top",
   "languages": {
     "Python": {
       "language_servers": ["pyright", "ruff"],

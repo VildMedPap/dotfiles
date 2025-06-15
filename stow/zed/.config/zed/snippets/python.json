@@ -1,0 +1,67 @@
+{
+  "Load JSON (snippet)": {
+    "prefix": "load_json",
+    "body": [
+      "with open('${1:file_path}.json', 'r') as f:",
+      "    ${2:data} = json.load(f)"
+    ],
+    "description": "Load JSON data from a file"
+  },
+
+  "Save JSON (snippet)": {
+    "prefix": "save_json",
+    "body": [
+      "with open('${1:file_path}.json', 'w') as f:",
+      "    json.dump(${2:data}, f, indent=2)"
+    ],
+    "description": "Save JSON data to a file"
+  },
+
+  "import: ujson (snippet)": {
+    "prefix": "ujson",
+    "body": ["import ujson as json"],
+    "description": "Import the ujson module as json"
+  },
+
+  "import: dotenv (snippet)": {
+    "prefix": "dotenv",
+    "body": ["from dotenv import load_dotenv", "", "load_dotenv()"],
+    "description": "Import the dotenv module"
+  },
+
+  "import: loguru (snippet)": {
+    "prefix": "loguru",
+    "body": ["from loguru import logger"],
+    "description": "Import the loguru logger"
+  },
+
+  "import: pathlib (snippet)": {
+    "prefix": "pathlib",
+    "body": ["from pathlib import Path"],
+    "description": "Import the pathlib module"
+  },
+
+  "import: pydantic (snippet)": {
+    "prefix": "pydantic",
+    "body": ["from pydantic import BaseModel, Field"],
+    "description": "Import the pydantic module"
+  },
+
+  "import: datetime (snippet)": {
+    "prefix": "datetime",
+    "body": ["from datetime import datetime, UTC"],
+    "description": "Import the datetime module with UTC"
+  },
+
+  "Now in UTC (snippet)": {
+    "prefix": "now",
+    "body": ["datetime.now(UTC)"],
+    "description": "Get the current time in UTC"
+  },
+
+  "Generate a UUID4 (snippet)": {
+    "prefix": "uuid4",
+    "body": ["uuid.uuid4()"],
+    "description": "Generate a UUID4"
+  }
+}

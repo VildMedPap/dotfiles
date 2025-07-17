@@ -20,6 +20,7 @@
   },
   "context_servers": {
     "mcp-server-context7": {
+      "source": "extension",
       "settings": {
         "default_minimum_tokens": "10000"
       }
@@ -32,6 +33,10 @@
       "proxy_no_verify": null
     },
     "enabled_in_text_threads": false
+  },
+  "file_types": {
+    "Make": ["Makefile*"],
+    "Dockerfile": ["Dockerfile*"]
   },
   "icon_theme": "Material Icon Theme",
   "vim_mode": true,

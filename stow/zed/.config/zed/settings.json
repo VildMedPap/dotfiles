@@ -16,7 +16,6 @@
     "always_allow_tool_actions": false,
     "model_parameters": [],
     "default_profile": "write",
-    "version": "2"
   },
   "context_servers": {
     "mcp-server-context7": {
@@ -52,7 +51,9 @@
   "buffer_font_features": {
     "calt": false
   },
-  "drag_and_drop_selection": false,
+  "drag_and_drop_selection": {
+    "enabled": false
+  },
   "hide_mouse": "on_typing_and_movement",
   "minimap": {
     "show": "always",

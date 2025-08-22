@@ -95,6 +95,9 @@ export PATH="$PATH:$HOME/.cache/lm-studio/bin"
 # PostgreSQL (Homebrew)
 export PATH="$PATH:/opt/homebrew/opt/postgresql@17/bin"
 
+# Claude Code
+export PATH="$PATH:$HOME/.local/bin"
+
 ### ── Prompt Manager ──────────────────────────────────────────────
 eval "$(starship init zsh)"
 

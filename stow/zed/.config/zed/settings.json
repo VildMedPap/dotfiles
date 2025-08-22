@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "project_panel": {
+    "hide_gitignore": false
+  },
   "agent": {
     "play_sound_when_agent_done": true,
     "default_model": {

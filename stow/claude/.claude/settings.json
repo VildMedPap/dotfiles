@@ -1,9 +1,4 @@
 {
-  "model": "opusplan",
-  "statusLine": {
-    "type": "command",
-    "command": "uv run ~/.claude/assets/scripts/statusline.py"
-  },
   "permissions": {
     "deny": [
       "Read(.env)",
@@ -17,5 +12,10 @@
       "Read(**/secrets/**)",
       "Read(**/credentials/**)"
     ]
-  }
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "uv run ~/.claude/assets/scripts/statusline.py"
+  },
+  "model": "opusplan"
 }

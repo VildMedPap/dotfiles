@@ -18,10 +18,13 @@ This dotfiles repository includes configurations for the following tools:
 |------|-------------|--------------|--------|
 | **CLI Tools** | | | |
 | `gh` | GitHub CLI for repository management | `brew install gh` | ✓ |
+| `git` | Version control system | (pre-installed on macOS) | ✓ |
 | `htop` | Interactive process viewer | `brew install htop` | ✓ |
 | `neofetch` | System information display tool | `brew install neofetch` | ✓ |
 | `starship` | Cross-shell prompt customization | `brew install starship` | ✓ |
 | `tmux` | Terminal multiplexer | `brew install tmux` | ✓ |
+| `vim` | Text editor | (pre-installed on macOS) | ✓ |
+| `zsh` | Shell | (pre-installed on macOS) | ✓ |
 | `eza` | Modern replacement for ls | `brew install eza` |  |
 | `fzf` | Fuzzy finder for command line | `brew install fzf` |  |
 | `awscli` | AWS command line interface | `brew install awscli` |  |
@@ -57,7 +60,7 @@ This dotfiles repository includes configurations for the following tools:
 | `google-chrome` | Web browser | `brew install --cask google-chrome` |  |
 | `lm-studio` | Local language model runner | `brew install --cask lm-studio` |  |
 | `proxyman` | HTTP debugging proxy | `brew install --cask proxyman` |  |
-| `claude` | Anthropic Claude AI assistant | `brew install --cask claude` |  |
+| `claude` | Anthropic Claude AI assistant | `brew install --cask claude` | ✓ |
 
 ## Quick Installation
 

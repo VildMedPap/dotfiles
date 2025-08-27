@@ -2,15 +2,11 @@
   "permissions": {
     "deny": [
       "Read(.env)",
-      "Read(**/.env*)",
-      "Read(**/secret*)",
-      "Read(**/env*)",
+      "Read(**/.env)",
       "Read(**/*.pem)",
       "Read(**/*.key)",
       "Read(**/*.crt)",
-      "Read(**/*.cert)",
-      "Read(**/secrets/**)",
-      "Read(**/credentials/**)"
+      "Read(**/*.cert)"
     ]
   },
   "statusLine": {

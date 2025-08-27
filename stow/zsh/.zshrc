@@ -82,6 +82,9 @@ else
 fi
 
 ### ── Toolchain & CLI Setup ───────────────────────────────────────
+# Python - prevent bytecode (.pyc) file generation for cleaner directories
+export PYTHONDONTWRITEBYTECODE=1
+
 # Rust (cargo, etc.)
 source "$HOME/.cargo/env"
 

@@ -6,12 +6,13 @@
       "Read(**/*.pem)",
       "Read(**/*.key)",
       "Read(**/*.crt)",
-      "Read(**/*.cert)"
+      "Read(**/*.cert)",
+      "Bash(terraform apply:*)"
     ]
   },
+  "model": "opusplan",
   "statusLine": {
     "type": "command",
     "command": "uv run ~/.claude/assets/scripts/statusline.py"
-  },
-  "model": "opusplan"
+  }
 }

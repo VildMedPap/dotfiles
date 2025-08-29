@@ -24,3 +24,5 @@ model: claude-sonnet-4-0
      - `docs` --> documentation updates
    - Examples: `fix/authentication-timeout`, `feat/add-user-preferences`
    - Keep the description short (2–4 words) and use kebab-case.
+
+**IMPORTANT** You're NOT allowed to make any commits! Only create and switch branch.

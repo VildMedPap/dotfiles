@@ -5,14 +5,12 @@ description: Create pull request for this branch with target $ARGUMENTS.
 model: claude-sonnet-4-0
 ---
 
-## Context
-
-- Commits on this branch: !`git log origin/$ARGUMENTS..HEAD`
+Target branch: $ARGUMENTS
 
 ## Your task
 
 0. **Push Local Commits**: Before proceeding, ensure all your work is on the remote by:
-   - Checking for local commits not yet pushed (`git status` or `git log origin/main..HEAD`)
+   - Checking for local commits not yet pushed (`git status` or `git log origin/[TARGET BRANCH]..HEAD`)
    - Using `git push` to publish your branch and make commits available on GitHub
    - Verifying your branch is up-to-date with the remote before continuing
 

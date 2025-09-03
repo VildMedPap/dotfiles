@@ -18,7 +18,7 @@
     },
     "always_allow_tool_actions": false,
     "model_parameters": [],
-    "default_profile": "write",
+    "default_profile": "write"
   },
   "context_servers": {
     "mcp-server-context7": {
@@ -45,6 +45,7 @@
   "vim": {
     "toggle_relative_line_numbers": true
   },
+  "soft_wrap": "editor_width",
   "cursor_blink": false,
   "scrollbar": { "show": "never" },
   "ui_font_size": 16,

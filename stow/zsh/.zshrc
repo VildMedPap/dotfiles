@@ -43,6 +43,7 @@ alias tmux="tmux -u"
 alias l='ls -lAhG'
 alias take='foo(){ mkdir -p "$1" && cd "$1"; }; foo'
 alias colo='claude --dangerously-skip-permissions'
+alias z='zed .'
 
 # Directory jumping
 alias ..='cd ..'

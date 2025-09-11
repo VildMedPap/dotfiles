@@ -7,6 +7,8 @@ model: claude-sonnet-4-0
 
 Target branch: $ARGUMENTS
 
+IMPORTANT: You are NOT allowed to switch branch!
+
 ## Your task
 
 0. **Push Local Commits**: Before proceeding, ensure all your work is on the remote by:

@@ -1,4 +1,4 @@
-theme = GruvBoxDarkHard
+theme = Gruvbox Dark Hard
 font-family = Monaspace Neon ExtraLight
 font-family-bold = Monaspace Neon Medium
 font-family-italic = Monaspace Neon ExtraLight Italic
@@ -10,3 +10,4 @@ copy-on-select = clipboard
 bold-is-bright = true
 macos-icon = xray
 adjust-underline-position = 20%
+keybind = shift+enter=text:\x1b\r

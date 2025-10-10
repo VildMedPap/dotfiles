@@ -72,6 +72,7 @@ Choose the most appropriate type:
      b. Craft appropriate commit message
      c. Create commit: `git commit -m "message"`
    - Verify each commit before moving to the next
+   - **IMPORTANT**: NEVER mention Claude Code, AI, or add any attribution footer to commit messages
 
 4. **Quality Checks**:
    - Ensure no commit is too large (prefer smaller, focused commits)
@@ -106,6 +107,8 @@ refactor: extract validation logic to separate module
 Move all validation functions from controllers to a
 dedicated validation module for better reusability.
 ```
+
+**Note**: Keep commit messages clean and professional. Never add AI attribution, tool mentions, or automated footers.
 
 ## Error Handling
 

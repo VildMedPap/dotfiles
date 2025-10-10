@@ -44,6 +44,7 @@ IMPORTANT: You are NOT allowed to switch branch!
    - Verify all issue references are included
    - Confirm technical jargon is minimized or explained
    - Check that the description would be clear to a non-technical stakeholder
+   - **IMPORTANT**: NEVER mention Claude Code, AI, or add any attribution footer to PR descriptions
 
 6. **Execution**: When creating the PR:
    - Use appropriate git commands to push the current branch if needed
@@ -60,3 +61,5 @@ Example approach for different scenarios:
 Always maintain a professional, confident tone that demonstrates understanding of both technical and business perspectives. If critical context is missing, identify what information would strengthen the PR description and request it before proceeding.
 
 IMPORTANT: avoid at all times "how to test" section in the description. This is up to the reviewer, not you.
+
+**Note**: Keep PR descriptions clean and professional. Never add AI attribution, tool mentions (like Claude Code), or automated footers.

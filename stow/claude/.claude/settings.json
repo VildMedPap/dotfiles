@@ -10,9 +10,9 @@
       "Bash(terraform apply:*)"
     ]
   },
-  "model": "opus",
   "statusLine": {
     "type": "command",
     "command": "uv run ~/.claude/assets/scripts/statusline.py"
-  }
+  },
+  "alwaysThinkingEnabled": true
 }

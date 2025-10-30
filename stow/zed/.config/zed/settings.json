@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "show_completions_on_input": true,
   "project_panel": {
     "hide_gitignore": false
   },
